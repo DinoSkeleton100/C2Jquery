@@ -59,3 +59,8 @@
   .woman {
     background-color: rgb(215, 189, 226);
   }
+
+  .failedRegex {
+    border-color: red;
+    border-style: solid;
+  }

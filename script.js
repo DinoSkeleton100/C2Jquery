@@ -68,4 +68,22 @@ $(document).ready(function() {
         $('body').css('background-color','rgb(14, 102, 85)');
     });
     //<<
+
+    //patterns for regex
+    const patternOnlyLetters = /^([a-zA-Z]|\s)+$/;
+
+
+    //submit button >> checking regex
+    $('#submit').on('click', function() {
+
+        //testing name
+        var inputName = $('#inputName').val();
+        // alert(inputName);
+        // alert(patternOnlyLetters.test(inputName));
+        if (patternOnlyLetters.test(inputName) == false) {
+            $('#inputName').addClass('failedRegex')
+        } 
+
+    });
+
 });
