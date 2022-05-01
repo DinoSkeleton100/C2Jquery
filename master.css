@@ -9,6 +9,10 @@
     font-family: 'Space Grotesk', sans-serif;
   }
 
+  input {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
   .langBox {
     display: flex;
     justify-content: center;
