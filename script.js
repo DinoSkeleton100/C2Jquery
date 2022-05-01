@@ -34,15 +34,25 @@ $(document).ready(function() {
 
     //language knoppen en vertalen
     $('#englishButton').on('click', function() {
-        for (var i = 0; i < englishTranslate.length; i++) {
-            $('[data-languageTranslateId='+i+']').text(englishTranslate[i]);
-        }
+        $('.langBox').hide(1000);
+        $('.formBox').slideUp(1000, function() {
+            for (var i = 0; i < englishTranslate.length; i++) {
+                $('[data-languageTranslateId='+i+']').text(englishTranslate[i]);
+            }
+        });
+        $('.formBox').slideDown(1000);
+        $('.langBox').show(1000);
     });
 
     $('#dutchButton').on('click', function() {
-        for (var i = 0; i < dutchTranslate.length; i++) {
-            $('[data-languageTranslateId='+i+']').text(dutchTranslate[i]);
-        }
+        $('.langBox').hide(1000);
+        $('.formBox').slideUp(1000, function() {
+            for (var i = 0; i < dutchTranslate.length; i++) {
+                $('[data-languageTranslateId='+i+']').text(dutchTranslate[i]);
+            }
+        });
+        $('.formBox').slideDown(1000);
+        $('.langBox').show(1000);
     });
 
     //gender en kleurverandering >>
