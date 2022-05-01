@@ -6,7 +6,14 @@ $(document).ready(function() {
         "Gender:",
         "man",
         "woman",
-        "Name:"
+        "Name:",
+        "Adress:",
+        "City:",
+        "Zipcode:",
+        "Date of birth:",
+        "Nationality:",
+        "Job:",
+        "Submit"
     ];
 
     const dutchTranslate = [
@@ -15,7 +22,14 @@ $(document).ready(function() {
         "Geslacht:",
         "man",
         "vrouw",
-        "Naam:"
+        "Naam:",
+        "Adres:",
+        "Woonplaats:",
+        "Postcode:",
+        "Geboortedatum:",
+        "Nationaliteit:",
+        "Beroep:",
+        "Invullen"
     ];
 
     //language knoppen en vertalen
