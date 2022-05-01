@@ -4,7 +4,7 @@
   }
 
   body {
-    background-color: #223041;
+    background-color: rgb(14, 102, 85);
     color: white;
     font-family: 'Space Grotesk', sans-serif;
   }
@@ -14,12 +14,28 @@
     justify-content: center;
   }
 
-  .langButton {
+  .button {
     padding: 2px;
     margin: 5px;
+    border-radius: 6px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  #englishButton {
+    background-color: cornflowerblue;
+  }
+
+  #dutchButton {
+    background-color: orange;
   }
 
   .formBox {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -28,15 +44,14 @@
     background-color: rgba(255,255,255,0.2);
     border-radius: 10px;
     backdrop-filter: blur(10px);
-    /* width: 60%; */
     height: fit-content;
     row-gap: 20px;
   }
 
   .man {
-    background-color: lawngreen;
+    background-color: rgb(162, 217, 206);
   }
 
   .woman {
-    background-color: pink;
+    background-color: rgb(215, 189, 226);
   }
