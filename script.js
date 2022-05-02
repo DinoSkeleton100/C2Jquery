@@ -78,11 +78,27 @@ $(document).ready(function() {
 
         //testing name
         var inputName = $('#inputName').val();
-        // alert(inputName);
-        // alert(patternOnlyLetters.test(inputName));
         if (patternOnlyLetters.test(inputName) == false) {
-            $('#inputName').addClass('failedRegex')
-        } 
+            $('#inputName').addClass('failedRegex');
+        } else {
+            $('#inputName').removeClass('failedRegex');
+        }
+
+        //testing Nationality
+        var inputNationality = $('#inputNationality').val();
+        if (patternOnlyLetters.test(inputNationality) == false) {
+            $('#inputNationality').addClass('failedRegex');
+        } else {
+            $('#inputNationality').removeClass('failedRegex');
+        }
+
+        //testing Job
+        var inputJob = $('#inputJob').val();
+        if (patternOnlyLetters.test(inputJob) == false) {
+            $('#inputJob').addClass('failedRegex');
+        } else {
+            $('#inputJob').removeClass('failedRegex');
+        }
 
     });
 
