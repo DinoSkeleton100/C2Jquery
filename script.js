@@ -76,6 +76,8 @@ $(document).ready(function() {
     //patterns for regex
     const patternOnlyLetters = /^([a-zA-Z]|\s)+$/;
     const patternZipcode = /^(\d){4}(\s)?([a-zA-Z]){2}$/;
+    const patternAdress = /^(.)*(\d)+$/;
+    const patternCity = /^([a-zA-Z])+([a-zA-Z]|\d)+$/;
 
     //submit button >> checking regex
     var alertBoxTrigger = false;
@@ -88,6 +90,24 @@ $(document).ready(function() {
             alertBoxTrigger = true;
         } else {
             $('#inputName').removeClass('failedRegex');
+        }
+
+        //testing Adress
+        var inputAdress = $('#inputAdress').val();
+        if (patternAdress.test(inputAdress) == false) {
+            $('#inputAdress').addClass('failedRegex');
+            alertBoxTrigger = true;
+        } else {
+            $('#inputAdress').removeClass('failedRegex');
+        }
+
+        //testing City
+        var inputCity = $('#inputCity').val();
+        if (patternCity.test(inputCity) == false) {
+            $('#inputCity').addClass('failedRegex');
+            alertBoxTrigger = true;
+        } else {
+            $('#inputCity').removeClass('failedRegex');
         }
 
         //testing Zipcode
