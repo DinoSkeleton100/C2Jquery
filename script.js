@@ -13,7 +13,9 @@ $(document).ready(function() {
         "Date of birth:",
         "Nationality:",
         "Job:",
-        "Submit"
+        "Submit",
+        "Not all of the fields have been filled in correctly!",
+        "Okay, I'll try again!"
     ];
 
     const dutchTranslate = [
@@ -29,7 +31,9 @@ $(document).ready(function() {
         "Geboortedatum:",
         "Nationaliteit:",
         "Beroep:",
-        "Invullen"
+        "Invullen",
+        "Niet alle velden zijn correct ingevuld!",
+        "Oke, ik probeer het opnieuw!"
     ];
 
     //language knoppen en vertalen
@@ -74,12 +78,14 @@ $(document).ready(function() {
 
 
     //submit button >> checking regex
+    var alertBoxTrigger = false;
     $('#submit').on('click', function() {
-
+        alertBoxTrigger = false; //resetting
         //testing name
         var inputName = $('#inputName').val();
         if (patternOnlyLetters.test(inputName) == false) {
             $('#inputName').addClass('failedRegex');
+            alertBoxTrigger = true;
         } else {
             $('#inputName').removeClass('failedRegex');
         }
@@ -88,6 +94,7 @@ $(document).ready(function() {
         var inputNationality = $('#inputNationality').val();
         if (patternOnlyLetters.test(inputNationality) == false) {
             $('#inputNationality').addClass('failedRegex');
+            alertBoxTrigger = true;
         } else {
             $('#inputNationality').removeClass('failedRegex');
         }
@@ -96,10 +103,23 @@ $(document).ready(function() {
         var inputJob = $('#inputJob').val();
         if (patternOnlyLetters.test(inputJob) == false) {
             $('#inputJob').addClass('failedRegex');
+            alertBoxTrigger = true;
         } else {
             $('#inputJob').removeClass('failedRegex');
         }
 
+        //alertbox popup > button to dissapear
+        if (alertBoxTrigger == true) {
+            $('#alertWindow').removeClass('hidden');
+        }
+        $('#alertButton').on('click', function() {
+            $('#alertWindow').addClass('hidden');
+        });
+
+
+
     });
+
+
 
 });

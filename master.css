@@ -64,3 +64,30 @@
     border-color: red;
     border-style: solid;
   }
+
+  #alertWindow {
+    background-color: white;
+    color: black;
+    position: fixed;
+    top: 10%;
+    left: 20%;
+    width: 60%;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    text-align: center;
+    border-style: solid;
+    border-color: red;
+    box-shadow: 10px 10px 8px black;
+  }
+
+  #alertButton {
+    border-color: red;
+  }
+
+  #alertButton:hover {
+    border-color: green;
+  }
+
+  .hidden {
+    display: none;
+  }
