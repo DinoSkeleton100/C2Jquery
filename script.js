@@ -75,7 +75,7 @@ $(document).ready(function() {
 
     //patterns for regex
     const patternOnlyLetters = /^([a-zA-Z]|\s)+$/;
-
+    const patternZipcode = /^(\d){4}(\s)?([a-zA-Z]){2}$/;
 
     //submit button >> checking regex
     var alertBoxTrigger = false;
@@ -88,6 +88,15 @@ $(document).ready(function() {
             alertBoxTrigger = true;
         } else {
             $('#inputName').removeClass('failedRegex');
+        }
+
+        //testing Zipcode
+        var inputZipcode = $('#inputZipcode').val();
+        if (patternZipcode.test(inputZipcode) == false) {
+            $('#inputZipcode').addClass('failedRegex');
+            alertBoxTrigger = true;
+        } else {
+            $('#inputZipcode').removeClass('failedRegex');
         }
 
         //testing Nationality
