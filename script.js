@@ -78,6 +78,7 @@ $(document).ready(function() {
     const patternZipcode = /^(\d){4}(\s)?([a-zA-Z]){2}$/;
     const patternAdress = /^(.)*(\d)+$/;
     const patternCity = /^([a-zA-Z])+([a-zA-Z]|\d)+$/;
+    const patternDate = /^([0-2][0-9]|3[0-1])(-| )(0[1-9]|1[0-2])(-| )(19[])$/;
 
     //submit button >> checking regex
     var alertBoxTrigger = false;
@@ -117,6 +118,15 @@ $(document).ready(function() {
             alertBoxTrigger = true;
         } else {
             $('#inputZipcode').removeClass('failedRegex');
+        }
+
+        //testing Date
+        var inputDate = $('#inputDate').val();
+        if (patternDate.test(inputDate) == false) {
+            $('#inputDate').addClass('failedRegex');
+            alertBoxTrigger = true;
+        } else {
+            $('#inputDate').removeClass('failedRegex');
         }
 
         //testing Nationality
