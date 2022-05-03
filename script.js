@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    //hiding textage text so it can animate when date of birth is calculated
+    $('#textAge').hide();
 
     const englishTranslate = [
         "English",
@@ -78,7 +80,7 @@ $(document).ready(function() {
     const patternZipcode = /^(\d){4}(\s)?([a-zA-Z]){2}$/;
     const patternAdress = /^(.)*(\d)+$/;
     const patternCity = /^([a-zA-Z])+([a-zA-Z]|\d)+$/;
-    const patternDate = /^([0-2][0-9]|3[0-1])(-| )(0[1-9]|1[0-2])(-| )(19[])$/;
+    const patternDate = /^([0-2][0-9]|3[0-1])(-| )(0[1-9]|1[0-2])(-| )(19[0-9]{2}|20[0-9]{2})$/;
 
     //submit button >> checking regex
     var alertBoxTrigger = false;
@@ -158,6 +160,21 @@ $(document).ready(function() {
 
 
     });
+
+    //calculating date and showing it
+
+    // $('#inputDate').on('input', function() {
+    $('#inputDate').on('change', function() {
+        var inputDateTemp = $('#inputDate').val();
+        if (patternDate.test(inputDateTemp) == true) {
+            // alert("jes");
+            $('#textAge').text(inputDateTemp);
+            $('#textAge').fadeIn(500);
+        } else {
+            $('#textAge').fadeOut(500);
+        }
+    });
+
 
 
 

@@ -7,6 +7,7 @@
     background-color: rgb(14, 102, 85);
     color: white;
     font-family: 'Space Grotesk', sans-serif;
+    font-size: 20px;
   }
 
   input {
@@ -44,7 +45,6 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
     background-color: rgba(255,255,255,0.2);
     border-radius: 10px;
     backdrop-filter: blur(10px);
@@ -90,4 +90,33 @@
 
   .hidden {
     display: none;
+  }
+
+  .singleFormType {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    padding-left: 5%;
+    padding-right: 10%;
+  }
+
+  .inputBoxes {
+    width: 30%;
+  }
+
+  #textAge {
+    font-size: large;
+    font-weight: 900;
+    background: linear-gradient(90deg,#7b59b1, #ee6a5e, #fcb064, #7b59b1, #ee6a5e, #fcb064);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    background-clip: text;
+	  -webkit-text-fill-color: transparent;
+    animation: animated_text 8s ease-in-out infinite;
+  }
+
+  @keyframes animated_text {
+    0% { background-position: 0px 50%; }
+  	50% { background-position: 100% 50%; }
+  	100% { background-position: 0px 50%; }
   }
