@@ -1,6 +1,7 @@
 $(document).ready(function() {
     //hiding textage text so it can animate when date of birth is calculated
     $('#textAge').hide();
+    $('#doneText').hide();
 
     const englishTranslate = [
         "English",
@@ -17,7 +18,8 @@ $(document).ready(function() {
         "Job:",
         "Submit",
         "Not all of the fields have been filled in correctly!",
-        "Okay, I'll try again!"
+        "Okay, I'll try again!",
+        "Succeeded!"
     ];
 
     const dutchTranslate = [
@@ -35,7 +37,8 @@ $(document).ready(function() {
         "Beroep:",
         "Invullen",
         "Niet alle velden zijn correct ingevuld!",
-        "Oke, ik probeer het opnieuw!"
+        "Oke, ik probeer het opnieuw!",
+        "Voltooid!"
     ];
 
     //language knoppen en vertalen
@@ -152,6 +155,9 @@ $(document).ready(function() {
         //alertbox popup > button to dissapear
         if (alertBoxTrigger == true) {
             $('#alertWindow').removeClass('hidden');
+            $('#doneText').fadeOut();
+        } else {
+            $('#doneText').fadeIn();
         }
         $('#alertButton').on('click', function() {
             $('#alertWindow').addClass('hidden');
