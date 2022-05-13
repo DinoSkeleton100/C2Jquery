@@ -19,7 +19,8 @@ $(document).ready(function() {
         "Submit",
         "Not all of the fields have been filled in correctly!",
         "Okay, I'll try again!",
-        "Succeeded!"
+        "Succeeded!",
+        "Comments:"
     ];
 
     const dutchTranslate = [
@@ -38,7 +39,8 @@ $(document).ready(function() {
         "Invullen",
         "Niet alle velden zijn correct ingevuld!",
         "Oke, ik probeer het opnieuw!",
-        "Voltooid!"
+        "Voltooid!",
+        "Opmerkingen:"
     ];
 
     //language knoppen en vertalen
@@ -203,8 +205,6 @@ $(document).ready(function() {
             $('#textAge').fadeOut(500);
         }
     });
-
-
 
 
 });

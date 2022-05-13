@@ -20,13 +20,17 @@
   }
 
   .button {
-    padding: 2px;
+    padding: 4px;
     margin: 10px;
-    border-radius: 6px;
+    border-radius: 2px;
     border-width: 2px;
     border-style: solid;
     border-color: white;
     font-family: 'Space Grotesk', sans-serif;
+  }
+
+  .button:hover {
+    background-color: white !important;
   }
 
   #englishButton {
