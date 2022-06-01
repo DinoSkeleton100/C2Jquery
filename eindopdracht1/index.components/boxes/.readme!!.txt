@@ -1,1 +1,0 @@
-all the components should be in another div, to see how this works look in the "eindopdracht2" folder it's index.html file.

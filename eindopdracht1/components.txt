@@ -1,7 +1,0 @@
-In this folder you can see the files splitted up in single components.
-
-
-It is important that you do not forget to put the .html components in a html 
-file, also put the .css components into a css file and the .js components in js files!!
-
-After you put the components in the right files you have to link the files propperly, else the program won't work either.

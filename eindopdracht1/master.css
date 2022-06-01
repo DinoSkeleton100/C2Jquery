@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    text-align: center;
+    background-color: #223041;
+    color: white;
+    font-family: 'Space Grotesk', sans-serif;
+  }
+
+  #wrapperForTitle {
+    padding: 3em;
+    display: flex;
+    justify-content: center;
+  }
+
+  #wrapperForBoxes {
+    padding: 3em;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  #moveButtons {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+  }
+
+  .box {
+      height: fit-content;
+      width: 30%;
+      border: 4px, solid, white;
+      background-color: darkgoldenrod;
+  }
+
+  .selectedWord {
+    border-width: 2px;
+    border-style: solid;
+    border-color: white;
+  }
