@@ -66,7 +66,7 @@ $(document).ready(function() {
         $('.langBox').show(1000);
     });
 
-    //gender en kleurverandering >>
+    //gender en kleurverandering
     $('#womanButton').on('click', function() {
         $('.man').addClass('woman');
         $('.man').removeClass('man');
@@ -78,7 +78,6 @@ $(document).ready(function() {
         $('.woman').removeClass('woman');
         $('body').css('background-color','rgb(14, 102, 85)');
     });
-    //<<
 
     //patterns for regex
     const patternOnlyLetters = /^([a-zA-Z]|\s)+$/;
